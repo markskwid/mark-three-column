@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --Brightorange: hsl(31, 77%, 52%);
+  --Darkcyan: hsl(184, 100%, 22%);
+  --Verydarkcyan: hsl(179, 100%, 13%);
+  --TransparentWhite: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+  --VeryLightGray: hsl(0, 0%, 95%); /* background, headings, buttons */
+}
+/** typography **/
+
+body {
+  font-size: 15px;
+}
+
+h2 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--VeryLightGray);
+}
+
+p {
+  line-height: 1.8;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: var(--TransparentWhite);
+}
+
+/** layout **/
+
+html {
+  background-color: var(--VeryLightGray);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  display: flex;
+  width: 900px;
+  align-items: stretch;
+}
+
+.main-container .col {
+  padding: 3em;
+  width: 33%;
+  color: var(--VeryLightGray);
+  text-align: start;
+}
+
+.main-container .col button {
+  padding: 1em;
+  border-radius: 50px;
+  width: 70%;
+  font-family: "Lexend Deca", sans-serif;
+  border: 0;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 4em;
+  border: 2px solid transparent;
+}
+
+.main-container .col:nth-child(1) {
+  background-color: var(--Brightorange);
+  border-radius: 10px 0 0 10px;
+}
+
+.main-container .col:nth-child(1) > button {
+  color: var(--Brightorange);
+}
+
+.main-container .col:nth-child(2) {
+  background-color: var(--Darkcyan);
+  border-radius: 0;
+}
+
+.main-container .col:nth-child(2) > button {
+  color: var(--Darkcyan);
+}
+
+.main-container .col:nth-child(3) {
+  background-color: var(--Verydarkcyan);
+  border-radius: 0 10px 10px 0;
+}
+
+.main-container .col:nth-child(3) > button {
+  color: var(--Verydarkcyan);
+}
+
+.main-container .col button:hover {
+  border: 2px solid var(--VeryLightGray);
+  color: inherit;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 2em 3em;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    overflow: hidden;
+  }
+
+  .main-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .main-container .col {
+    padding: 3em;
+    width: 90%;
+    max-width: 90%;
+    color: var(--VeryLightGray);
+    text-align: start;
+  }
+
+  .main-container .col button {
+    padding: 1.2em;
+  }
+
+  .main-container .col:nth-child(1) {
+    background-color: var(--Brightorange);
+    border-radius: 10px 10px 0 0;
+  }
+
+  .main-container .col:nth-child(2) {
+    background-color: var(--Darkcyan);
+    border-radius: 0;
+  }
+
+  .main-container .col:nth-child(3) {
+    background-color: var(--Verydarkcyan);
+    border-radius: 0 0 10px 10px;
+  }
+}
